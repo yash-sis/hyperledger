@@ -1,46 +1,62 @@
 
 import React from 'react';
 import { DiagramBox } from '../DiagramComponents';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const IntroSlide: React.FC = () => {
   return (
     <div className="slide-content">
-      <h1 className="slide-title">Hyperledger</h1>
-      <div className="flex-1 flex flex-col items-center justify-center">
-        <div className="max-w-3xl mx-auto text-center mb-8">
-          <p className="text-xl mb-6">
-            An open source collaborative effort to advance cross-industry blockchain technologies
-          </p>
+      <div className="hero-section flex justify-center items-center mb-6">
+        <div className="flex space-x-8 items-center">
+          <div className="logo-container">
+            <AspectRatio ratio={3/1} className="w-60">
+              <div className="bg-[url('https://www.hyperledger.org/wp-content/uploads/2018/03/logo_hl_new.png')] bg-contain bg-no-repeat bg-center h-full"></div>
+            </AspectRatio>
+          </div>
+          <div className="text-3xl font-bold text-center">+</div>
+          <div className="logo-container">
+            <AspectRatio ratio={4/1} className="w-48">
+              <div className="bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/The_Linux_Foundation_logo.png/1200px-The_Linux_Foundation_logo.png')] bg-contain bg-no-repeat bg-center h-full"></div>
+            </AspectRatio>
+          </div>
         </div>
+      </div>
+      
+      <div className="relative z-10">
+        <h1 className="slide-title">Hyperledger</h1>
         
-        <div className="grid grid-cols-3 gap-4 w-full max-w-4xl mx-auto mb-8">
-          <div className="col-span-3">
-            <DiagramBox 
-              title="What is Hyperledger?" 
-              color="bg-[#f0f7ff] border-[#cce3ff]"
-              className="p-4"
-            >
-              <p className="text-left">
-                A global collaboration hosted by The Linux Foundation, creating an open source enterprise grade platform for distributed ledgers
+        <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200 shadow-sm mb-8">
+          <p className="text-xl text-center mb-6">
+            <span className="font-semibold">Not a blockchain</span>, but an open-source umbrella project launched by the Linux Foundation in 2015
+          </p>
+          
+          <div className="grid grid-cols-1 gap-4 mb-4">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg border border-blue-200">
+              <p className="text-lg">
+                Goal: Foster collaborative development of <span className="font-medium">enterprise-grade distributed ledger technologies</span>
               </p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center">
+            <DiagramBox 
+              title="Hosts various blockchain projects focused on:" 
+              color="bg-[#f0f7ff] border-[#cce3ff]"
+              className="p-4 max-w-xl"
+            >
+              <div className="flex flex-wrap justify-center gap-3 mt-2">
+                <span className="px-3 py-1 bg-blue-100 rounded-full text-blue-800">Modularity</span>
+                <span className="px-3 py-1 bg-green-100 rounded-full text-green-800">Scalability</span>
+                <span className="px-3 py-1 bg-purple-100 rounded-full text-purple-800">Performance</span>
+                <span className="px-3 py-1 bg-yellow-100 rounded-full text-yellow-800">Enterprise Applications</span>
+              </div>
             </DiagramBox>
           </div>
         </div>
-        
-        <div className="w-full">
-          <h3 className="slide-subtitle text-center">Projects under Hyperledger</h3>
-          <div className="grid grid-cols-4 gap-3 max-w-3xl mx-auto">
-            <DiagramBox title="Fabric" color="bg-blue-100 border-blue-300" />
-            <DiagramBox title="Sawtooth Lake" color="bg-green-100 border-green-300" />
-            <DiagramBox title="Iroha" color="bg-purple-100 border-purple-300" />
-            <DiagramBox title="Burrow" color="bg-yellow-100 border-yellow-300" />
-            <DiagramBox title="Indy" color="bg-red-100 border-red-300" />
-            <DiagramBox title="Explorer" color="bg-orange-100 border-orange-300" />
-            <DiagramBox title="Cello" color="bg-pink-100 border-pink-300" />
-            <DiagramBox title="Composer" color="bg-indigo-100 border-indigo-300" />
-            <DiagramBox title="Quilt" color="bg-teal-100 border-teal-300" className="col-span-4" />
-          </div>
-        </div>
+      </div>
+      
+      <div className="blockchain-network-bg absolute inset-0 opacity-10 z-0">
+        <div className="h-full w-full bg-[url('https://img.freepik.com/free-vector/blockchain-background-with-technology-connection-concept_1017-31586.jpg')] bg-cover bg-center"></div>
       </div>
     </div>
   );

@@ -116,7 +116,7 @@
 }
 
 .slide-content {
-  @apply max-w-5xl mx-auto h-full px-8 py-10 flex flex-col;
+  @apply max-w-5xl mx-auto h-full px-8 py-10 flex flex-col relative;
 }
 
 .slide-title {
@@ -149,7 +149,7 @@
 }
 
 .progress-dot {
-  @apply w-2 h-2 rounded-full bg-gray-300 transition-all duration-300;
+  @apply w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer;
 }
 
 .progress-dot.active {
@@ -183,4 +183,93 @@
 
 .timeline-content {
   @apply bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex-1;
+}
+
+/* New styles for the updated slides */
+
+/* Lifecycle Timeline */
+.lifecycle-timeline {
+  @apply relative space-y-6 before:content-[''] before:absolute before:left-4 before:top-4 before:h-[calc(100%-32px)] before:w-0.5 before:bg-gray-200;
+}
+
+.timeline-stage {
+  @apply flex items-start pl-14 relative;
+}
+
+.stage-node {
+  @apply w-8 h-8 flex items-center justify-center rounded-full border-2 absolute left-0 z-10;
+}
+
+.stage-content {
+  @apply bg-white p-3 rounded-lg border border-gray-200 shadow-sm w-full;
+}
+
+/* Categories Cards */
+.category-card {
+  @apply bg-white p-5 rounded-lg border border-gray-200 shadow-sm transition-all duration-300 cursor-pointer hover:shadow-md;
+}
+
+.category-card.expanded {
+  @apply bg-gray-50;
+}
+
+.category-header {
+  @apply flex items-center gap-3 mb-2;
+}
+
+.category-content {
+  @apply mt-3 border-t border-gray-200 pt-3;
+}
+
+/* Libraries Horizontal Scroll */
+.libraries-scroll-container {
+  @apply relative overflow-x-auto pb-2;
+}
+
+.libraries-scroll {
+  @apply flex space-x-4 p-1;
+}
+
+.library-card {
+  @apply flex bg-white rounded-lg border border-gray-200 shadow-sm p-4 min-w-[280px];
+}
+
+.card-icon {
+  @apply p-4 rounded-lg flex items-center justify-center mr-4;
+}
+
+.card-content {
+  @apply flex-1;
+}
+
+/* Development Tools */
+.toolkit-item {
+  @apply flex flex-col h-full;
+}
+
+.toolkit-header {
+  @apply border-b;
+}
+
+/* Domain Projects */
+.domain-header {
+  @apply h-14;
+}
+
+/* Ecosystem Tree */
+.ecosystem-tree {
+  @apply px-4;
+}
+
+.tree-root {
+  @apply text-center;
+}
+
+.tree-trunk {
+  position: relative;
+}
+
+.tree-trunk:before {
+  content: '';
+  @apply absolute top-1/2 left-1/2 w-[90%] h-0 border-t-2 border-dashed border-gray-400 -translate-x-1/2;
 }

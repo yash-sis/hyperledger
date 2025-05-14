@@ -2,6 +2,13 @@
 import React, { useState } from 'react';
 import PresentationControls from './PresentationControls';
 import IntroSlide from './slides/IntroSlide';
+import LifecycleSlide from './slides/LifecycleSlide';
+import CategoriesSlide from './slides/CategoriesSlide';
+import FrameworksSlide from './slides/FrameworksSlide';
+import LibrariesSlide from './slides/LibrariesSlide';
+import ToolsSlide from './slides/ToolsSlide';
+import DomainProjectsSlide from './slides/DomainProjectsSlide';
+import EcosystemSummarySlide from './slides/EcosystemSummarySlide';
 import ProtocolSlide from './slides/ProtocolSlide';
 import FabricOverviewSlide from './slides/FabricOverviewSlide';
 import FabricComponentsSlide from './slides/FabricComponentsSlide';
@@ -15,6 +22,13 @@ const Presentation: React.FC = () => {
 
   const slides = [
     <IntroSlide key="intro" />,
+    <LifecycleSlide key="lifecycle" />,
+    <CategoriesSlide key="categories" />,
+    <FrameworksSlide key="frameworks" />,
+    <LibrariesSlide key="libraries" />,
+    <ToolsSlide key="tools" />,
+    <DomainProjectsSlide key="domain" />,
+    <EcosystemSummarySlide key="ecosystem" />,
     <ProtocolSlide key="protocol" />,
     <FabricOverviewSlide key="fabric-overview" />,
     <FabricComponentsSlide key="fabric-components" />,
