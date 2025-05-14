@@ -16,6 +16,8 @@ import ChaincodeSlide from './slides/ChaincodeSlide';
 import FabricOverviewSlide from './slides/FabricOverviewSlide';
 import FabricComponentsSlide from './slides/FabricComponentsSlide';
 import FabricApplicationsSlide from './slides/FabricApplicationsSlide';
+import FabricMembershipSlide from './slides/FabricMembershipSlide';
+import FabricLedgerSlide from './slides/FabricLedgerSlide';
 import SawtoothSlide from './slides/SawtoothSlide';
 import CordaSlide from './slides/CordaSlide';
 import SummarySlide from './slides/SummarySlide';
@@ -37,6 +39,8 @@ const Presentation: React.FC = () => {
     <ModularApproachSlide key="modular-approach" />,
     <ChaincodeSlide key="chaincode" />,
     <FabricOverviewSlide key="fabric-overview" />,
+    <FabricMembershipSlide key="fabric-membership" />,
+    <FabricLedgerSlide key="fabric-ledger" />,
     <FabricComponentsSlide key="fabric-components" />,
     <FabricApplicationsSlide key="fabric-applications" />,
     <SawtoothSlide key="sawtooth" />,
