@@ -10,6 +10,9 @@ import ToolsSlide from './slides/ToolsSlide';
 import DomainProjectsSlide from './slides/DomainProjectsSlide';
 import EcosystemSummarySlide from './slides/EcosystemSummarySlide';
 import ProtocolSlide from './slides/ProtocolSlide';
+import ProtocolEvolutionSlide from './slides/ProtocolEvolutionSlide';
+import ModularApproachSlide from './slides/ModularApproachSlide';
+import ChaincodeSlide from './slides/ChaincodeSlide';
 import FabricOverviewSlide from './slides/FabricOverviewSlide';
 import FabricComponentsSlide from './slides/FabricComponentsSlide';
 import FabricApplicationsSlide from './slides/FabricApplicationsSlide';
@@ -29,7 +32,10 @@ const Presentation: React.FC = () => {
     <ToolsSlide key="tools" />,
     <DomainProjectsSlide key="domain" />,
     <EcosystemSummarySlide key="ecosystem" />,
+    <ProtocolEvolutionSlide key="protocol-evolution" />,
     <ProtocolSlide key="protocol" />,
+    <ModularApproachSlide key="modular-approach" />,
+    <ChaincodeSlide key="chaincode" />,
     <FabricOverviewSlide key="fabric-overview" />,
     <FabricComponentsSlide key="fabric-components" />,
     <FabricApplicationsSlide key="fabric-applications" />,

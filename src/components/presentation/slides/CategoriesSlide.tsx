@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { DiagramBox } from '../DiagramComponents';
-import { Database, Library, Tool, Grid } from 'lucide-react';
+import { Database, ShieldIcon, Code, Grid2X2 } from 'lucide-react';
 
 const CategoriesSlide: React.FC = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
@@ -18,98 +18,99 @@ const CategoriesSlide: React.FC = () => {
     <div className="slide-content">
       <h1 className="slide-title">Categories of Hyperledger Projects</h1>
       
-      <div className="grid grid-cols-2 gap-6 flex-1">
-        {/* Distributed Ledger Frameworks */}
+      <div className="grid grid-cols-2 gap-6">
         <div 
           className={`category-card ${expandedCategory === 'frameworks' ? 'expanded' : ''}`}
           onClick={() => toggleCategory('frameworks')}
         >
           <div className="category-header">
-            <Database className="h-8 w-8 text-blue-500" />
-            <h3 className="text-xl font-medium">Distributed Ledger Frameworks</h3>
+            <Database className="h-6 w-6 text-blue-600" />
+            <h3 className="text-xl font-semibold">Distributed Ledger Frameworks</h3>
           </div>
+          <p className="text-gray-600">Complete blockchain systems with consensus and smart contract support</p>
           
           {expandedCategory === 'frameworks' && (
             <div className="category-content">
-              <p className="mb-3 text-gray-600">Core blockchain platforms for decentralized applications</p>
-              <ul className="space-y-1 text-sm">
-                <li>• Fabric, Sawtooth, Iroha</li>
-                <li>• Indy, Besu, Burrow</li>
-                <li>• Consensus mechanisms & smart contracts</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-2">
+                <DiagramBox title="Fabric" color="bg-blue-50 border-blue-200">Modular architecture with pluggable consensus</DiagramBox>
+                <DiagramBox title="Sawtooth" color="bg-blue-50 border-blue-200">PoET consensus, transaction families</DiagramBox>
+                <DiagramBox title="Iroha" color="bg-blue-50 border-blue-200">Mobile-friendly, Sumeragi consensus</DiagramBox>
+                <DiagramBox title="Indy" color="bg-blue-50 border-blue-200">Identity-focused blockchain</DiagramBox>
+                <DiagramBox title="Besu" color="bg-blue-50 border-blue-200">Ethereum-compatible (EVM)</DiagramBox>
+                <DiagramBox title="Burrow" color="bg-blue-50 border-blue-200">Smart contracts with BFT consensus</DiagramBox>
+              </div>
             </div>
           )}
         </div>
         
-        {/* Libraries */}
         <div 
           className={`category-card ${expandedCategory === 'libraries' ? 'expanded' : ''}`}
           onClick={() => toggleCategory('libraries')}
         >
           <div className="category-header">
-            <Library className="h-8 w-8 text-green-500" />
-            <h3 className="text-xl font-medium">Libraries</h3>
+            <Code className="h-6 w-6 text-green-600" />
+            <h3 className="text-xl font-semibold">Libraries</h3>
           </div>
+          <p className="text-gray-600">Reusable components for cross-platform blockchain functionality</p>
           
           {expandedCategory === 'libraries' && (
             <div className="category-content">
-              <p className="mb-3 text-gray-600">Shared services across DLT projects</p>
-              <ul className="space-y-1 text-sm">
-                <li>• Aries, Transact</li>
-                <li>• Quilt, Ursa</li>
-                <li>• Reusable components for blockchain systems</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-2">
+                <DiagramBox title="Aries" color="bg-green-50 border-green-200">Decentralized identity infrastructure</DiagramBox>
+                <DiagramBox title="Transact" color="bg-green-50 border-green-200">Smart contract execution engine</DiagramBox>
+                <DiagramBox title="Ursa" color="bg-green-50 border-green-200">Cryptographic library</DiagramBox>
+                <DiagramBox title="Quilt" color="bg-green-50 border-green-200">Interledger Protocol (ILP) implementation</DiagramBox>
+              </div>
             </div>
           )}
         </div>
         
-        {/* Developer Tools */}
         <div 
           className={`category-card ${expandedCategory === 'tools' ? 'expanded' : ''}`}
           onClick={() => toggleCategory('tools')}
         >
           <div className="category-header">
-            <Tool className="h-8 w-8 text-purple-500" />
-            <h3 className="text-xl font-medium">Developer Tools</h3>
+            <Grid2X2 className="h-6 w-6 text-purple-600" />
+            <h3 className="text-xl font-semibold">Developer Tools</h3>
           </div>
+          <p className="text-gray-600">Tools for building, deploying, and monitoring blockchain networks</p>
           
           {expandedCategory === 'tools' && (
             <div className="category-content">
-              <p className="mb-3 text-gray-600">Tools to build, test, and deploy DLT networks</p>
-              <ul className="space-y-1 text-sm">
-                <li>• Caliper, Cello</li>
-                <li>• Explorer, Avalon</li>
-                <li>• Testing, deployment, monitoring solutions</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-2">
+                <DiagramBox title="Caliper" color="bg-purple-50 border-purple-200">Performance benchmarking</DiagramBox>
+                <DiagramBox title="Cello" color="bg-purple-50 border-purple-200">Blockchain-as-a-Service deployment</DiagramBox>
+                <DiagramBox title="Explorer" color="bg-purple-50 border-purple-200">Block and transaction viewer</DiagramBox>
+                <DiagramBox title="Avalon" color="bg-purple-50 border-purple-200">Trusted computation framework</DiagramBox>
+              </div>
             </div>
           )}
         </div>
         
-        {/* Domain-Specific Solutions */}
         <div 
           className={`category-card ${expandedCategory === 'domain' ? 'expanded' : ''}`}
           onClick={() => toggleCategory('domain')}
         >
           <div className="category-header">
-            <Grid className="h-8 w-8 text-orange-500" />
-            <h3 className="text-xl font-medium">Domain-Specific Solutions</h3>
+            <ShieldIcon className="h-6 w-6 text-orange-600" />
+            <h3 className="text-xl font-semibold">Domain-Specific Solutions</h3>
           </div>
+          <p className="text-gray-600">Industry-focused blockchain applications and toolkits</p>
           
           {expandedCategory === 'domain' && (
             <div className="category-content">
-              <p className="mb-3 text-gray-600">Industry-focused applications and frameworks</p>
-              <ul className="space-y-1 text-sm">
-                <li>• Grid (supply chain)</li>
-                <li>• Labs (experimental projects)</li>
-                <li>• Industry-specific solutions</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-2">
+                <DiagramBox title="Grid" color="bg-orange-50 border-orange-200">Supply chain framework and components</DiagramBox>
+                <DiagramBox title="Firefly" color="bg-orange-50 border-orange-200">Multi-party systems and tokenization</DiagramBox>
+              </div>
+              <p className="mt-2 text-sm text-gray-600">Plus incubating projects in: Healthcare, Finance, Manufacturing</p>
             </div>
           )}
         </div>
       </div>
       
-      <div className="text-center text-sm text-gray-500 mt-3">
-        Click on a category to learn more
+      <div className="mt-6 text-center text-sm text-gray-500">
+        Click on each category to see details
       </div>
     </div>
   );
