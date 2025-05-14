@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,6 +50,11 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Presentation theme colors */
+    --hyperledger-primary: 200 100% 38%;
+    --hyperledger-secondary: 152 69% 31%;
+    --hyperledger-accent: 24 100% 50%;
   }
 
   .dark {
@@ -98,4 +104,83 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Presentation-specific styles */
+.slide {
+  @apply absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 ease-in-out pointer-events-none;
+}
+
+.slide.active {
+  @apply opacity-100 pointer-events-auto;
+}
+
+.slide-content {
+  @apply max-w-5xl mx-auto h-full px-8 py-10 flex flex-col;
+}
+
+.slide-title {
+  @apply text-3xl font-bold text-center mb-8 text-gray-800;
+}
+
+.slide-subtitle {
+  @apply text-xl font-semibold mb-4 text-gray-700;
+}
+
+.bullet-point {
+  @apply flex items-start mb-2;
+}
+
+.bullet-point:before {
+  content: "•";
+  @apply mr-2 text-[hsl(var(--hyperledger-primary))];
+}
+
+.diagram-container {
+  @apply border border-gray-200 rounded-lg p-4 bg-white shadow-sm my-4;
+}
+
+.navigation-controls {
+  @apply fixed bottom-6 left-0 right-0 flex justify-center items-center gap-4 z-50;
+}
+
+.progress-indicator {
+  @apply fixed bottom-2 left-0 right-0 flex justify-center items-center gap-1 z-50;
+}
+
+.progress-dot {
+  @apply w-2 h-2 rounded-full bg-gray-300 transition-all duration-300;
+}
+
+.progress-dot.active {
+  @apply w-4 bg-[hsl(var(--hyperledger-primary))];
+}
+
+/* Diagram and chart specific styles */
+.architecture-diagram {
+  @apply w-full max-w-3xl mx-auto;
+}
+
+.flowchart {
+  @apply w-full max-w-3xl mx-auto;
+}
+
+.comparison-chart {
+  @apply w-full overflow-x-auto;
+}
+
+.timeline {
+  @apply relative w-full py-8 px-4;
+}
+
+.timeline-item {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.timeline-node {
+  @apply w-6 h-6 rounded-full flex items-center justify-center bg-[hsl(var(--hyperledger-primary))] text-white flex-shrink-0;
+}
+
+.timeline-content {
+  @apply bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex-1;
 }
