@@ -1,17 +1,18 @@
-
-import React from 'react';
-import { DiagramBox } from '../DiagramComponents';
-import { Zap, Server, Search, Shield } from 'lucide-react';
+import React from "react";
+import { DiagramBox } from "../DiagramComponents";
+import { Zap, Server, Search, Shield } from "lucide-react";
 
 const ToolsSlide: React.FC = () => {
   return (
-    <div className="slide-content">
+    <div className="slide-content h-full w-full overflow-y-auto">
       <h1 className="slide-title">Development Tools</h1>
-      
+
       <div className="text-center mb-6">
-        <p className="text-lg">Tools help developers build, deploy, and monitor DLT networks</p>
+        <p className="text-lg">
+          Tools help developers build, deploy, and monitor DLT networks
+        </p>
       </div>
-      
+
       <div className="grid grid-cols-2 gap-6 flex-1">
         {/* Caliper */}
         <div className="toolkit-item border border-gray-200 rounded-lg overflow-hidden shadow-sm">
@@ -43,7 +44,7 @@ const ToolsSlide: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Cello */}
         <div className="toolkit-item border border-gray-200 rounded-lg overflow-hidden shadow-sm">
           <div className="toolkit-header bg-green-50 p-4 flex items-center justify-between">
@@ -74,7 +75,7 @@ const ToolsSlide: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Explorer */}
         <div className="toolkit-item border border-gray-200 rounded-lg overflow-hidden shadow-sm">
           <div className="toolkit-header bg-purple-50 p-4 flex items-center justify-between">
@@ -105,7 +106,7 @@ const ToolsSlide: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Avalon */}
         <div className="toolkit-item border border-gray-200 rounded-lg overflow-hidden shadow-sm">
           <div className="toolkit-header bg-yellow-50 p-4 flex items-center justify-between">

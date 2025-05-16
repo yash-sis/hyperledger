@@ -1,24 +1,23 @@
-
-import React from 'react';
-import { ComparisonChart, DiagramBox } from '../DiagramComponents';
-import { Database, Lock, Shield, Zap } from 'lucide-react';
+import React from "react";
+import { ComparisonChart, DiagramBox } from "../DiagramComponents";
+import { Database, Lock, Shield, Zap } from "lucide-react";
 
 const FrameworksSlide: React.FC = () => {
   return (
-    <div className="slide-content">
+    <div className="slide-content h-full w-full overflow-y-auto">
       <h1 className="slide-title">Distributed Ledger Frameworks</h1>
-      
+
       <div className="text-center mb-4">
         <div className="inline-flex items-center px-4 py-1 rounded-full bg-blue-100 text-blue-800">
           <Database className="h-4 w-4 mr-2" />
           <span>Consensus-driven, decentralized data storage</span>
         </div>
       </div>
-      
+
       <div className="flex-1">
         <ComparisonChart
           title="Hyperledger Frameworks Comparison"
-          headers={["Framework", "Consensus", "Key Features", "Use Cases"]}
+          headers={["Framework", "Consensus", "Key Features"]}
           rows={[
             {
               label: "Fabric",
@@ -28,12 +27,13 @@ const FrameworksSlide: React.FC = () => {
                   <span>Pluggable (Raft, Kafka)</span>
                 </div>,
                 <div key="fabric-features">
-                  <span className="font-medium">IBM-backed</span> modular architecture with private channels
+                  <span className="font-medium">IBM-backed</span> modular
+                  architecture with private channels
                 </div>,
                 <div key="fabric-cases">
                   Supply chain, financial services, healthcare
-                </div>
-              ]
+                </div>,
+              ],
             },
             {
               label: "Sawtooth",
@@ -43,12 +43,13 @@ const FrameworksSlide: React.FC = () => {
                   <span>PoET, PBFT</span>
                 </div>,
                 <div key="sawtooth-features">
-                  <span className="font-medium">Intel-backed</span> with transaction families
+                  <span className="font-medium">Intel-backed</span> with
+                  transaction families
                 </div>,
                 <div key="sawtooth-cases">
                   Manufacturing, IoT, provenance tracking
-                </div>
-              ]
+                </div>,
+              ],
             },
             {
               label: "Iroha",
@@ -58,12 +59,13 @@ const FrameworksSlide: React.FC = () => {
                   <span>Sumeragi (BFT)</span>
                 </div>,
                 <div key="iroha-features">
-                  <span className="font-medium">Mobile-optimized</span> with simple API
+                  <span className="font-medium">Mobile-optimized</span> with
+                  simple API
                 </div>,
                 <div key="iroha-cases">
                   Mobile applications, digital assets, identity
-                </div>
-              ]
+                </div>,
+              ],
             },
             {
               label: "Indy",
@@ -73,12 +75,13 @@ const FrameworksSlide: React.FC = () => {
                   <span>RBFT</span>
                 </div>,
                 <div key="indy-features">
-                  <span className="font-medium">Self-sovereign identity</span> focused
+                  <span className="font-medium">Self-sovereign identity</span>{" "}
+                  focused
                 </div>,
                 <div key="indy-cases">
                   Digital ID, KYC, credential management
-                </div>
-              ]
+                </div>,
+              ],
             },
             {
               label: "Besu",
@@ -88,12 +91,13 @@ const FrameworksSlide: React.FC = () => {
                   <span>PoW, PoA, IBFT</span>
                 </div>,
                 <div key="besu-features">
-                  <span className="font-medium">Ethereum-compatible</span> (Java)
+                  <span className="font-medium">Ethereum-compatible</span>{" "}
+                  (Java)
                 </div>,
                 <div key="besu-cases">
                   Public/private Ethereum networks, DeFi
-                </div>
-              ]
+                </div>,
+              ],
             },
             {
               label: "Burrow",
@@ -103,13 +107,14 @@ const FrameworksSlide: React.FC = () => {
                   <span>Tendermint BFT</span>
                 </div>,
                 <div key="burrow-features">
-                  <span className="font-medium">EVM + BFT consensus</span> (Monax)
+                  <span className="font-medium">EVM + BFT consensus</span>{" "}
+                  (Monax)
                 </div>,
                 <div key="burrow-cases">
                   Smart contracts, permissioned Ethereum
-                </div>
-              ]
-            }
+                </div>,
+              ],
+            },
           ]}
         />
       </div>
